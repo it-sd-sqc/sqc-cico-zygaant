@@ -41,9 +41,10 @@ public class Main {
     public void insertString(FilterBypass fb, int offset, String stringToAdd, AttributeSet attr)
         throws BadLocationException
     {
-      if (fb.getDocument() != null) {
+      if (fb.getDocument() != null && fb.getDocument().getLength() <= MAX_LENGTH ) {
         super.insertString(fb, offset, stringToAdd, attr);
       }
+
       else {
         Toolkit.getDefaultToolkit().beep();
       }
@@ -256,7 +257,7 @@ public class Main {
     fieldNumber.setPreferredSize(new Dimension(200, 32));
     fieldNumber.setMaximumSize(new Dimension(200, 32));
     fieldNumber.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    fieldNumber.setBackground(Color.green);
+    fieldNumber.setBackground(Color.cyan);
     fieldNumber.setForeground(Color.magenta);
     panelMain.add(fieldNumber);
 
