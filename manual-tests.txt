@@ -62,3 +62,24 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 * Should display "Developer" for the user name.
 
 
+
+
+New bug: application still runs despite program being closed. 
+
+##Test steps : search for "clean shutdown" as directed by sr dev. and review OnShutdown. 
+
+1: run program in intellij 
+2: close application pop up
+
+Expected result: clean shut down. 
+
+Results: No results. 
+
+searched source material for shutdowns and default behaviours added line of code  to give a static behavior when creating GUI. 
+// frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+
+
+
+
+
+
