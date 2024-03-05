@@ -41,9 +41,10 @@ public class Main {
     public void insertString(FilterBypass fb, int offset, String stringToAdd, AttributeSet attr)
         throws BadLocationException
     {
-      if (fb.getDocument() != null) {
+      if (fb.getDocument() != null && fb.getDocument().getLength() <= MAX_LENGTH ) {
         super.insertString(fb, offset, stringToAdd, attr);
       }
+
       else {
         Toolkit.getDefaultToolkit().beep();
       }
@@ -230,7 +231,8 @@ public class Main {
     frame.setMinimumSize(new Dimension(320, 240));
     frame.setPreferredSize(new Dimension(640, 480));
     frame.setMaximumSize(new Dimension(640, 480));
-
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//source material listed this as the correct option to fix ticket
+    // Collect each "card" panel in a deck.
     // Collect each "card" panel in a deck.
     deck = new JPanel(new CardLayout());
     Font fontMain = new Font(Font.SANS_SERIF, Font.PLAIN, 24);
@@ -256,7 +258,7 @@ public class Main {
     fieldNumber.setPreferredSize(new Dimension(200, 32));
     fieldNumber.setMaximumSize(new Dimension(200, 32));
     fieldNumber.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    fieldNumber.setBackground(Color.green);
+    fieldNumber.setBackground(Color.cyan);
     fieldNumber.setForeground(Color.magenta);
     panelMain.add(fieldNumber);
 
