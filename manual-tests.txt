@@ -61,6 +61,15 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 ## Expected results
 * Should display "Developer" for the user name.
 
+#module 4
+
+## issue: text field allows more than 8 characters
+
+test steps : 
+1. Open and run CiCo
+2. Enter number into Text box
+
+#expected results: should only input 8 characters
 
 
 
