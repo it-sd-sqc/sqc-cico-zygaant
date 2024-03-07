@@ -76,7 +76,20 @@ Expected result: clean shut down.
 Results: No results. 
 
 searched source material for shutdowns and default behaviours added line of code  to give a static behavior when creating GUI. 
-// frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+// frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+
+# Professional Appearance Update Test
+
+## Steps
+1. Launch CiCo
+2. Navigate through main, status, and error panels.
+
+## Expected
+* All panels feature a professional, neutral color scheme.
+
+
 
 
 
